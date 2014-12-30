@@ -23,5 +23,5 @@ Installation
 Customization
 -------
 
-You can change the default bindings by customizing `evil-ReplaceWithRegister-key` BEFORE `evil-exchange-install` is called.
+You can change the default bindings by customizing `evil-ReplaceWithRegister-key` BEFORE `evil-ReplaceWithRegister-install` is called.
 
