@@ -66,7 +66,6 @@
   :move-point nil
   (interactive "<vc><R><x>")
   (setq count (or count 1))
-  (message "%S" count)
   (let ((text (if register
                   (evil-ReplaceWithRegister/get-register register)
                 (current-kill 0))))
