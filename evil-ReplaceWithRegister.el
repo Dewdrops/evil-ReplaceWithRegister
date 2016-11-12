@@ -67,7 +67,7 @@
   (interactive "<vc><R><x>")
   (setq count (or count 1))
   (let ((text (if register
-                  (evil-ReplaceWithRegister/get-register register)
+                  (evil-get-register register)
                 (current-kill 0))))
     (if (eq type 'block)
         (evil-apply-on-block
