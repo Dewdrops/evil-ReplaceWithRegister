@@ -14,7 +14,7 @@ Installation
 ------------
 
 ```lisp
-(require 'evil-ReplaceWithRegister)
+(require 'evil-replace-with-register)
 ;; change default key bindings (if you want) HERE
 ;; (setq evil-ReplaceWithRegister-key (kbd "gr"))
 (evil-ReplaceWithRegister-install)
