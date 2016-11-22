@@ -1,5 +1,4 @@
-;;; evil-ReplaceWithRegister.el --- Replacing an existing text with the
-;;; contents of a register
+;;; evil-ReplaceWithRegister.el --- Replacing an existing text with the contents of a register
 
 ;; Copyright (C) 2014 by Dewdrops
 
