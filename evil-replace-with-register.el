@@ -1,4 +1,4 @@
-;;; evil-ReplaceWithRegister.el --- Replacing an existing text with the contents of a register
+;;; evil-replace-with-register.el --- Port of vim plugin ReplaceWithRegister
 
 ;; Copyright (C) 2014 by Dewdrops
 
@@ -34,7 +34,7 @@
 ;;
 ;; put evil-ReplaceWithRegister.el somewhere in your load-path and add these
 ;; lines to your .emacs:
-;; (require 'evil-ReplaceWithRegister)
+;; (require 'evil-replace-with-register)
 ;; ;; change default key bindings (if you want) HERE
 ;; ;; (setq evil-ReplaceWithRegister-key (kbd "gr"))
 ;; (evil-ReplaceWithRegister-install)
@@ -92,5 +92,5 @@
   (define-key evil-visual-state-map
     evil-ReplaceWithRegister-key 'evil-ReplaceWithRegister))
 
-(provide 'evil-ReplaceWithRegister)
-;;; evil-ReplaceWithRegister.el ends here
+(provide 'evil-replace-with-register)
+;;; evil-replace-with-register.el ends here
