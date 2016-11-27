@@ -1,4 +1,4 @@
-;;; evil-replace-with-register.el --- Port of vim plugin ReplaceWithRegister
+;;; evil-replace-with-register.el --- Port of vim plugin replace-with-register
 
 ;; Copyright (C) 2014 by Dewdrops
 
@@ -32,35 +32,35 @@
 ;;
 ;; Installation:
 ;;
-;; put evil-ReplaceWithRegister.el somewhere in your load-path and add these
+;; put evil-replace-with-register.el somewhere in your load-path and add these
 ;; lines to your .emacs:
 ;; (require 'evil-replace-with-register)
 ;; ;; change default key bindings (if you want) HERE
-;; ;; (setq evil-ReplaceWithRegister-key (kbd "gr"))
-;; (evil-ReplaceWithRegister-install)
+;; ;; (setq evil-replace-with-register-key (kbd "gr"))
+;; (evil-replace-with-register-install)
 
 ;;; Code:
 
 (require 'evil)
 
-(defgroup evil-ReplaceWithRegister nil
+(defgroup evil-replace-with-register nil
   "Replacing an existing text with the contents of a register"
-  :prefix "evil-ReplaceWithRegister"
+  :prefix "evil-replace-with-register"
   :group 'evil)
 
-(defcustom evil-ReplaceWithRegister-key (kbd "gR")
-  "Default binding for evil-ReplaceWithRegister."
+(defcustom evil-replace-with-register-key (kbd "gR")
+  "Default binding for evil-replace-with-register."
   :type `,(if (get 'key-sequence 'widget-type)
               'key-sequence
             'sexp)
-  :group 'evil-ReplaceWithRegister)
+  :group 'evil-replace-with-register)
 
 
 ;;;###autoload
-(autoload 'evil-ReplaceWithRegister "evil-ReplaceWithRegister"
+(autoload 'evil-replace-with-register "evil-replace-with-register"
   "Replacing an existing text with the contents of a register" t)
 
-(evil-define-operator evil-ReplaceWithRegister (count beg end type register)
+(evil-define-operator evil-replace-with-register (count beg end type register)
   "Replacing an existing text with the contents of a register"
   :move-point nil
   (interactive "<vc><R><x>")
@@ -85,12 +85,12 @@
         (insert text)))))
 
 ;;;###autoload
-(defun evil-ReplaceWithRegister-install ()
-  "Setting evil-ReplaceWithRegister key bindings."
+(defun evil-replace-with-register-install ()
+  "Setting evil-replace-with-register key bindings."
   (define-key evil-normal-state-map
-    evil-ReplaceWithRegister-key 'evil-ReplaceWithRegister)
+    evil-replace-with-register-key 'evil-replace-with-register)
   (define-key evil-visual-state-map
-    evil-ReplaceWithRegister-key 'evil-ReplaceWithRegister))
+    evil-replace-with-register-key 'evil-replace-with-register))
 
 (provide 'evil-replace-with-register)
 ;;; evil-replace-with-register.el ends here
