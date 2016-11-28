@@ -1,4 +1,4 @@
-;;; evil-replace-with-register.el --- Port of vim plugin replace-with-register
+;;; evil-replace-with-register.el --- Port of vim plugin ReplaceWithRegister
 
 ;; Copyright (C) 2014 by Dewdrops
 
