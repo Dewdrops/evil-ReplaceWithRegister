@@ -1,6 +1,8 @@
 evil-replace-with-register
 ============
 
+[![MELPA](https://melpa.org/packages/evil-replace-with-register-badge.svg)](https://melpa.org/#/evil-replace-with-register)
+
 Port of [ReplaceWithRegister](http://www.vim.org/scripts/script.php?script_id=2703).
 
 Default bindings
