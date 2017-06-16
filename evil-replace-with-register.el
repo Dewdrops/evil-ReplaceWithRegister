@@ -68,6 +68,7 @@
   (let ((text (if register
                   (evil-get-register register)
                 (current-kill 0))))
+    (goto-char beg)
     (if (eq type 'block)
         (evil-apply-on-block
          (lambda (begcol endcol)
@@ -78,7 +79,7 @@
                      (end (evil-move-to-column endcol nil t)))
                  (delete-region beg end)
                  (dotimes (_ count)
-                   (insert text)))))) 
+                   (insert text))))))
          beg end t)
       (delete-region beg end)
       (dotimes (_ count)
