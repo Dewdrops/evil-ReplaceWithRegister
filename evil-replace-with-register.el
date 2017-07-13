@@ -55,6 +55,10 @@
             'sexp)
   :group 'evil-replace-with-register)
 
+(defcustom evil-replace-with-register-indent nil
+  "If non-nil, the newly added text will be indented."
+  :group 'evil-replace-with-register
+  :type  'boolean)
 
 ;;;###autoload
 (autoload 'evil-replace-with-register "evil-replace-with-register"
@@ -83,7 +87,11 @@
          beg end t)
       (delete-region beg end)
       (dotimes (_ count)
-        (insert text)))))
+        (insert text))
+      (when (and evil-replace-with-register-indent (/= (line-number-at-pos beg) (line-number-at-pos)))
+        ;; indent if more then one line was inserted
+        (save-excursion
+          (evil-indent beg (point)))))))
 
 ;;;###autoload
 (defun evil-replace-with-register-install ()
